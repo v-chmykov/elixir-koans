@@ -80,6 +80,6 @@ defmodule Enums do
   end
 
   koan "Collapse an entire list of elements down to a single one by repeating a function." do
-    assert Enum.reduce([1, 2, 3], 0, fn element, accumulator -> element + accumulator end) == ___
+    assert Enum.reduce([1, 2, 3], 0, fn element, accumulator -> element + accumulator end) == 6
   end
 end
