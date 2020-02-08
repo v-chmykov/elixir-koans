@@ -141,13 +141,13 @@ defmodule GenServers do
   koan "Let's use the remaining functions in the external API" do
     Laptop.start_link("EL!73")
     {_, response} = Laptop.unlock("EL!73")
-    assert response == ___
+    assert response == "Laptop unlocked!"
 
     Laptop.change_password("EL!73", "Elixir")
     {_, response} = Laptop.unlock("EL!73")
-    assert response == ___
+    assert response == "Incorrect password!"
 
     {_, response} = Laptop.owner_name()
-    assert response == ___
+    assert response == "Jack Sparrow"
   end
 end
